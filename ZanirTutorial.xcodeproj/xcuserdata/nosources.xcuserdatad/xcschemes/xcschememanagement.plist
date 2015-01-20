@@ -7,9 +7,14 @@
 		<key>Tutorial0BasicPrimitives.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Tutorial1LoadTextureAndTexturing.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Tutorial3BitmapFontAndFPS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>522E43811A6E1BDF00C52632</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>522E44F61A6E277300C52632</key>
 		<dict>
 			<key>primary</key>
 			<true/>
