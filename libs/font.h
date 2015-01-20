@@ -14,8 +14,8 @@ extern "C" {
 #endif
     GLvoid build_font();
     GLvoid delte_font();
-    GLvoid print_font(GLint x, GLint y, char* str, int set);
-    GLvoid print_font_(GLint x, GLint y, char* str, int set);
+    GLvoid print_font(GLint x, GLint y, const char* str, int set);
+    GLvoid print_font_(GLint x, GLint y, const char* str, int set);
 #ifdef __cplusplus
 }
 #endif

@@ -33,7 +33,7 @@ void display(){
     glRotatef(anglex, 1, 0, 0);
     glRotatef(angley, 0, 1, 0);
     
-    for (int i = 1; i < 3500; i++) {
+    for (int i = 1; i < 2; i++) {
         glColor3f(1.0f,1.0f,1.0f);		//biela farba
         glBindTexture(GL_TEXTURE_2D, fontTextureID);
         glBegin(GL_QUADS);
@@ -69,7 +69,7 @@ void display(){
         glTexCoord2f(0.0f, 1.0f); glVertex3f(-1.0f,  1.0f, -1.0f);
         glEnd();
     }
-#define REFRESH_FRAMES 60
+#define REFRESH_FRAMES 1000
     if (drawCount++ == REFRESH_FRAMES) {
         //every 60 times refresh the label.
         drawCount = 0;
@@ -77,12 +77,12 @@ void display(){
         gettimeofday(&last_draw_time, NULL);
         double duration = (double)( last_draw_time.tv_sec - temp.tv_sec ) + (double)(last_draw_time.tv_usec - temp.tv_usec) / 1000000;
         int fps = (float)REFRESH_FRAMES / duration;
-        print_font(0, 0, "FPS  is:", 0);
-        char temp_str[16] = {0};
-        sprintf(temp_str, "%d", fps);
-        print_font(70, 0, temp_str, 0);
+        char t[128] = {0};
+        sprintf(t, "FPS:%d", fps);
+        print_font(0, 0, t, 0);
+        labelContent = t;
     }else{
-        
+        print_font(0, 0, labelContent.c_str(), 0);
     }
 
     
@@ -104,7 +104,7 @@ int main(int argc, char * argv[])
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
-    glClearColor(0.1f, 0.1f, 0.0f, 1.0f);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClearDepth(1.0f);
     fontTextureID = load_png("resources/font.png");
     

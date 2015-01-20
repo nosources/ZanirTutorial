@@ -43,7 +43,7 @@ GLvoid delte_font() {
     glDeleteLists(base, 256);
 }
 
-GLvoid print_font(GLint x, GLint y, char* str, int set){
+GLvoid print_font(GLint x, GLint y, const char* str, int set){
     if (set > 1) {
         set = 1;
     }
@@ -70,7 +70,7 @@ GLvoid print_font(GLint x, GLint y, char* str, int set){
     glDisable(GL_BLEND);
 }
 
-GLvoid print_font_(GLint x, GLint y, char* str, int set){
+GLvoid print_font_(GLint x, GLint y, const char* str, int set){
     x *= 11;
     y = 600 - (y+1)*16;
     if (set > 1) {
