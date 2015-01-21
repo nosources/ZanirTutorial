@@ -24,9 +24,19 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>Tutorial4UsingDisplayListAndFog.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0AB9FFAD1A6FF9F8006E861B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0AC5B6291A6E9D8200820529</key>
 		<dict>
 			<key>primary</key>
@@ -43,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>522E44F61A6E277300C52632</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>52F1C4D71A6F58D100BCDFAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
