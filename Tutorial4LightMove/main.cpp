@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <sys/time.h>
 #include <GLUT/GLUT.h>
 #include "pngloader.h"
 #include "event_handler.h"
@@ -22,6 +23,15 @@ extern int anglex;
 extern int angley;
 extern int lastx;
 extern int lasty;
+
+extern GLuint fontTextureID;
+float a = 0.0f;
+float b = 0.0f;
+
+struct timeval last_draw_time;
+int drawCount;
+std::string labelContent;
+
 void drawCube(){
     glBegin(GL_QUADS);
     // Front Face
@@ -142,6 +152,23 @@ void display(){
         drawCube2(5);
     }
     glBindTexture(GL_TEXTURE_2D, 0);
+    glBindTexture(GL_TEXTURE_2D, fontTextureID);
+#define REFRESH_FRAMES 1000
+    if (drawCount++ == REFRESH_FRAMES) {
+        //every 60 times refresh the label.
+        drawCount = 0;
+        struct timeval temp = last_draw_time;
+        gettimeofday(&last_draw_time, NULL);
+        double duration = (double)( last_draw_time.tv_sec - temp.tv_sec ) + (double)(last_draw_time.tv_usec - temp.tv_usec) / 1000000;
+        int fps = (float)REFRESH_FRAMES / duration;
+        char t[128] = {0};
+        sprintf(t, "FPS:%d", fps);
+        print_font(0, 0, t, 0);
+        labelContent = t;
+    }else{
+        print_font(0, 0, labelContent.c_str(), 0);
+    }
+    glBindTexture(GL_TEXTURE_2D, 0);
     glutSwapBuffers();
 }
 int main(int argc, char * argv[])
@@ -149,11 +176,11 @@ int main(int argc, char * argv[])
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA |GLUT_DEPTH);
     
-    glutInitWindowSize(800, 800);
+    glutInitWindowSize(800, 600);
     glutInitWindowPosition(300, 300);
     glutCreateWindow("Light Move");
     
-    glViewport(0, 0, 800, 800);
+    glViewport(0, 0, 800, 600);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(60.0f, 1.0f, 1.0f, 100.0f);
@@ -178,6 +205,7 @@ int main(int argc, char * argv[])
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, material);
     
     textureId = load_png("resources/tex.png");
+    fontTextureID = load_png("resources/font.png");
     register_event_func();
     glutDisplayFunc(display);
     glutMainLoop();

@@ -19,8 +19,6 @@ extern int anglex;
 extern int angley;
 
 extern GLuint fontTextureID;
-float a = 0.0f;
-float b = 0.0f;
 
 struct timeval last_draw_time;
 int drawCount;
