@@ -21,7 +21,7 @@ extern int angley;
 extern GLuint fontTextureID;
 
 struct timeval last_draw_time;
-int drawCount;
+int drawCount=0;
 std::string labelContent;
 
 void display(){

@@ -25,11 +25,8 @@ extern int lastx;
 extern int lasty;
 
 extern GLuint fontTextureID;
-float a = 0.0f;
-float b = 0.0f;
-
 struct timeval last_draw_time;
-int drawCount;
+int drawCount=0;
 std::string labelContent;
 
 void drawCube(){
@@ -131,17 +128,17 @@ void display(){
     glLoadIdentity();
     glBegin(GL_LINES);
     glNormal3f(0.0f, 0.0f, 1.0f);
-    glVertex3f(-500.0f, 0.0f, 0.0f);
+    glVertex3f(-5.0f, 0.0f, 0.0f);
     glNormal3f(0.0f, 0.0f, 1.0f);
     glVertex3f(500.0f, 0.0f, 0.0f);
     glNormal3f(0.0f, 0.0f, 1.0f);
-    glVertex3f(0.0f, -500.0f, 0.0f);
+    glVertex3f(0.0f, -5.0f, 0.0f);
     glNormal3f(0.0f, 0.0f, 1.0f);
     glVertex3f(0.0f, 500.0f, 0.0f);
     glNormal3f(0.0f, 0.0f, 1.0f);
     glVertex3f(0.0f, 0.0f, -500.0f);
     glNormal3f(0.0f, 0.0f, 1.0f);
-    glVertex3f(0.0f, 0.0f, 500.0f);
+    glVertex3f(0.0f, 0.0f, 5.0f);
     glEnd();
     glBindTexture(GL_TEXTURE_2D, textureId);
     for (int i = 0; i < 20; i++) {
@@ -151,9 +148,9 @@ void display(){
         drawCube(2);
         drawCube2(5);
     }
+    glDisable(GL_LIGHTING);
     glBindTexture(GL_TEXTURE_2D, 0);
-    glBindTexture(GL_TEXTURE_2D, fontTextureID);
-#define REFRESH_FRAMES 1000
+#define REFRESH_FRAMES 60
     if (drawCount++ == REFRESH_FRAMES) {
         //every 60 times refresh the label.
         drawCount = 0;
@@ -168,7 +165,7 @@ void display(){
     }else{
         print_font(0, 0, labelContent.c_str(), 0);
     }
-    glBindTexture(GL_TEXTURE_2D, 0);
+    glEnable(GL_LIGHTING);
     glutSwapBuffers();
 }
 int main(int argc, char * argv[])
@@ -176,11 +173,11 @@ int main(int argc, char * argv[])
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA |GLUT_DEPTH);
     
-    glutInitWindowSize(800, 600);
+    glutInitWindowSize(600, 600);
     glutInitWindowPosition(300, 300);
     glutCreateWindow("Light Move");
     
-    glViewport(0, 0, 800, 600);
+    glViewport(0, 0, 600, 600);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(60.0f, 1.0f, 1.0f, 100.0f);
@@ -206,6 +203,7 @@ int main(int argc, char * argv[])
     
     textureId = load_png("resources/tex.png");
     fontTextureID = load_png("resources/font.png");
+    build_font();
     register_event_func();
     glutDisplayFunc(display);
     glutMainLoop();
