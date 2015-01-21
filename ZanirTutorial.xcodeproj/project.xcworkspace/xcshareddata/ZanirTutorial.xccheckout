@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D73124A0-15A9-4562-A743-62F89F5EBC53</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ZanirTutorial</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8622F7F8-7415-4D10-929E-63D64457E557</key>
+		<string>https://github.com/nosources/ZanirTutorial</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ZanirTutorial.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8622F7F8-7415-4D10-929E-63D64457E557</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nosources/ZanirTutorial</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8622F7F8-7415-4D10-929E-63D64457E557</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8622F7F8-7415-4D10-929E-63D64457E557</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZanirTutorial</string>
+		</dict>
+	</array>
+</dict>
+</plist>

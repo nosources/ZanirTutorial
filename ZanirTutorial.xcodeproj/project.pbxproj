@@ -140,6 +140,8 @@
 		522E466C1A6E2BC000C52632 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 522E45EB1A6E2BC000C52632 /* zutil.c */; };
 		522E466D1A6E2BC000C52632 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 522E45EB1A6E2BC000C52632 /* zutil.c */; };
 		522E46701A6E2D5F00C52632 /* resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = 522E466F1A6E2D4F00C52632 /* resources */; };
+		52F1C4DB1A6F58D100BCDFAC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F1C4DA1A6F58D100BCDFAC /* main.cpp */; };
+		52F1C4DD1A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52F1C4DC1A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -170,6 +172,16 @@
 				522E46701A6E2D5F00C52632 /* resources in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52F1C4D61A6F58D100BCDFAC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				52F1C4DD1A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -395,6 +407,9 @@
 		522E45EB1A6E2BC000C52632 /* zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zutil.c; sourceTree = "<group>"; };
 		522E45EC1A6E2BC000C52632 /* zutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zutil.h; sourceTree = "<group>"; };
 		522E466F1A6E2D4F00C52632 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
+		52F1C4D81A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tutorial4UsingDisplayListAndFog; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F1C4DA1A6F58D100BCDFAC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		52F1C4DC1A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Tutorial4UsingDisplayListAndFog.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,6 +434,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52F1C4D51A6F58D100BCDFAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -429,6 +451,7 @@
 				522E43831A6E1BDF00C52632 /* Tutorial0BasicPrimitives */,
 				522E43691A6E1B8B00C52632 /* Tutorial1LoadTextureAndTexturing */,
 				522E44F81A6E277300C52632 /* Tutorial3BitmapFontAndFPS */,
+				52F1C4D91A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */,
 				522E422B1A6E107500C52632 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -439,6 +462,7 @@
 				522E43681A6E1B8A00C52632 /* Tutorial1LoadTextureAndTexturing */,
 				522E43821A6E1BDF00C52632 /* Tutorial0BasicPrimitives */,
 				522E44F71A6E277300C52632 /* Tutorial3BitmapFontAndFPS */,
+				52F1C4D81A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -825,6 +849,15 @@
 			path = win32;
 			sourceTree = "<group>";
 		};
+		52F1C4D91A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */ = {
+			isa = PBXGroup;
+			children = (
+				52F1C4DA1A6F58D100BCDFAC /* main.cpp */,
+				52F1C4DC1A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog.1 */,
+			);
+			path = Tutorial4UsingDisplayListAndFog;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -879,6 +912,23 @@
 			productReference = 522E44F71A6E277300C52632 /* Tutorial3BitmapFontAndFPS */;
 			productType = "com.apple.product-type.tool";
 		};
+		52F1C4D71A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52F1C4E01A6F58D100BCDFAC /* Build configuration list for PBXNativeTarget "Tutorial4UsingDisplayListAndFog" */;
+			buildPhases = (
+				52F1C4D41A6F58D100BCDFAC /* Sources */,
+				52F1C4D51A6F58D100BCDFAC /* Frameworks */,
+				52F1C4D61A6F58D100BCDFAC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tutorial4UsingDisplayListAndFog;
+			productName = Tutorial4UsingDisplayListAndFog;
+			productReference = 52F1C4D81A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -903,6 +953,7 @@
 				522E43811A6E1BDF00C52632 /* Tutorial0BasicPrimitives */,
 				522E43671A6E1B8A00C52632 /* Tutorial1LoadTextureAndTexturing */,
 				522E44F61A6E277300C52632 /* Tutorial3BitmapFontAndFPS */,
+				52F1C4D71A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */,
 			);
 		};
 /* End PBXProject section */
@@ -1061,6 +1112,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52F1C4D41A6F58D100BCDFAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F1C4DB1A6F58D100BCDFAC /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -1200,6 +1259,24 @@
 			};
 			name = Release;
 		};
+		52F1C4DE1A6F58D100BCDFAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52F1C4DF1A6F58D100BCDFAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1235,6 +1312,15 @@
 			buildConfigurations = (
 				522E44FD1A6E277300C52632 /* Debug */,
 				522E44FE1A6E277300C52632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52F1C4E01A6F58D100BCDFAC /* Build configuration list for PBXNativeTarget "Tutorial4UsingDisplayListAndFog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52F1C4DE1A6F58D100BCDFAC /* Debug */,
+				52F1C4DF1A6F58D100BCDFAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
