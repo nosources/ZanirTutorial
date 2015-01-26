@@ -17,8 +17,18 @@
 
 void display(){
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-    glTranslated(0, 0, -10);
-    glutSolidSphere(2.0, 40, 32);
+    glPushMatrix();
+    glTranslatef(0, 0, -10);
+    glutSolidCube(2);
+    glTranslatef(5, 0, 0);
+    glRotatef(30, 0, 1, 0);
+    glutSolidCube(2);
+    glPopMatrix();
+    glTranslatef(0, 0, 20);
+    glTranslated(-5, 0, -10);
+//    glRotated(60, 1, 0, 0);
+//    glutSolidSphere(2.0, 40, 32);
+    
     glutSwapBuffers();
 }
 int main(int argc, char * argv[])
@@ -39,18 +49,11 @@ int main(int argc, char * argv[])
     
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClearDepth(1.0f);
-    
-    glEnable(GL_DEPTH_TEST);
-    glDepthFunc(GL_LEQUAL);
-    glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
-    
-    glEnable(GL_LIGHTING);
-    glEnable(GL_LIGHT0);
+
     
     GLfloat mat_specular[] = { 1.0, 1.0, 1.0, 1.0 };
     GLfloat mat_shininess[] = { 50.0 };
-    GLfloat light_position[] = { 1.0, 1.0, 1.0, 0.0 };
-    glClearColor (0.0, 0.0, 0.0, 0.0);
+    GLfloat light_position[] = { 0.0, 0.0, 1.0, 1.0 };
     glShadeModel (GL_SMOOTH);
     
     glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);

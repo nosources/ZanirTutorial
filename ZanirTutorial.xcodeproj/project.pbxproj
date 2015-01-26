@@ -271,6 +271,9 @@
 		522E43851A6E1BDF00C52632 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 522E43841A6E1BDF00C52632 /* main.cpp */; };
 		522E44FA1A6E277300C52632 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 522E44F91A6E277300C52632 /* main.cpp */; };
 		522E46701A6E2D5F00C52632 /* resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = 522E466F1A6E2D4F00C52632 /* resources */; };
+		526C841F1A75FA9100C3291B /* resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = 526C841E1A75FA7800C3291B /* resources */; };
+		526C84281A762A7F00C3291B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 526C84271A762A7F00C3291B /* main.cpp */; };
+		526C84301A76339000C3291B /* BitmapFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 526C842E1A76339000C3291B /* BitmapFont.cpp */; };
 		52F1C4DB1A6F58D100BCDFAC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F1C4DA1A6F58D100BCDFAC /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -321,7 +324,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52F1C4D61A6F58D100BCDFAC /* CopyFiles */ = {
+		526C84231A762A7F00C3291B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -329,6 +332,16 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		52F1C4D61A6F58D100BCDFAC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				526C841F1A75FA9100C3291B /* resources in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -558,6 +571,12 @@
 		522E44F71A6E277300C52632 /* Tutorial3BitmapFontAndFPS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tutorial3BitmapFontAndFPS; sourceTree = BUILT_PRODUCTS_DIR; };
 		522E44F91A6E277300C52632 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		522E466F1A6E2D4F00C52632 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
+		526C841E1A75FA7800C3291B /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
+		526C84201A75FAEC00C3291B /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
+		526C84251A762A7F00C3291B /* Tutorial9Terrain */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tutorial9Terrain; sourceTree = BUILT_PRODUCTS_DIR; };
+		526C84271A762A7F00C3291B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		526C842E1A76339000C3291B /* BitmapFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitmapFont.cpp; sourceTree = "<group>"; };
+		526C842F1A76339000C3291B /* BitmapFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapFont.h; sourceTree = "<group>"; };
 		52F1C4D81A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tutorial4UsingDisplayListAndFog; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F1C4DA1A6F58D100BCDFAC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -592,6 +611,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		522E44F41A6E277300C52632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		526C84221A762A7F00C3291B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -975,6 +1001,7 @@
 		0AB9FFB01A6FF9F8006E861B /* Tutorial4LightMove */ = {
 			isa = PBXGroup;
 			children = (
+				526C84201A75FAEC00C3291B /* resources */,
 				0AB9FFB11A6FF9F8006E861B /* main.cpp */,
 			);
 			path = Tutorial4LightMove;
@@ -990,6 +1017,7 @@
 				52F1C4D91A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */,
 				0AB9FFB01A6FF9F8006E861B /* Tutorial4LightMove */,
 				0A9DB6C61A74FE6C0094CB00 /* TutorialLightSphere */,
+				526C84261A762A7F00C3291B /* Tutorial9Terrain */,
 				522E422B1A6E107500C52632 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1003,6 +1031,7 @@
 				52F1C4D81A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */,
 				0AB9FFAE1A6FF9F8006E861B /* Tutorial4LightMove */,
 				0A9DB6C41A74FE6C0094CB00 /* TutorialLightSphere */,
+				526C84251A762A7F00C3291B /* Tutorial9Terrain */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1033,9 +1062,20 @@
 			path = Tutorial3BitmapFontAndFPS;
 			sourceTree = "<group>";
 		};
+		526C84261A762A7F00C3291B /* Tutorial9Terrain */ = {
+			isa = PBXGroup;
+			children = (
+				526C84271A762A7F00C3291B /* main.cpp */,
+				526C842E1A76339000C3291B /* BitmapFont.cpp */,
+				526C842F1A76339000C3291B /* BitmapFont.h */,
+			);
+			path = Tutorial9Terrain;
+			sourceTree = "<group>";
+		};
 		52F1C4D91A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */ = {
 			isa = PBXGroup;
 			children = (
+				526C841E1A75FA7800C3291B /* resources */,
 				52F1C4DA1A6F58D100BCDFAC /* main.cpp */,
 			);
 			path = Tutorial4UsingDisplayListAndFog;
@@ -1129,6 +1169,23 @@
 			productReference = 522E44F71A6E277300C52632 /* Tutorial3BitmapFontAndFPS */;
 			productType = "com.apple.product-type.tool";
 		};
+		526C84241A762A7F00C3291B /* Tutorial9Terrain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 526C842B1A762A7F00C3291B /* Build configuration list for PBXNativeTarget "Tutorial9Terrain" */;
+			buildPhases = (
+				526C84211A762A7F00C3291B /* Sources */,
+				526C84221A762A7F00C3291B /* Frameworks */,
+				526C84231A762A7F00C3291B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tutorial9Terrain;
+			productName = Tutorial9Terrain;
+			productReference = 526C84251A762A7F00C3291B /* Tutorial9Terrain */;
+			productType = "com.apple.product-type.tool";
+		};
 		52F1C4D71A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52F1C4E01A6F58D100BCDFAC /* Build configuration list for PBXNativeTarget "Tutorial4UsingDisplayListAndFog" */;
@@ -1173,6 +1230,7 @@
 				52F1C4D71A6F58D100BCDFAC /* Tutorial4UsingDisplayListAndFog */,
 				0AB9FFAD1A6FF9F8006E861B /* Tutorial4LightMove */,
 				0A9DB6C31A74FE6C0094CB00 /* TutorialLightSphere */,
+				526C84241A762A7F00C3291B /* Tutorial9Terrain */,
 			);
 		};
 /* End PBXProject section */
@@ -1433,6 +1491,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		526C84211A762A7F00C3291B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526C84281A762A7F00C3291B /* main.cpp in Sources */,
+				526C84301A76339000C3291B /* BitmapFont.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52F1C4D41A6F58D100BCDFAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1671,6 +1738,24 @@
 			};
 			name = Release;
 		};
+		526C842C1A762A7F00C3291B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		526C842D1A762A7F00C3291B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		52F1C4DE1A6F58D100BCDFAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1699,6 +1784,7 @@
 				0A9DB6CC1A74FE6C0094CB00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AB9FFB71A6FF9F8006E861B /* Build configuration list for PBXNativeTarget "Tutorial4LightMove" */ = {
 			isa = XCConfigurationList;
@@ -1744,6 +1830,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		526C842B1A762A7F00C3291B /* Build configuration list for PBXNativeTarget "Tutorial9Terrain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				526C842C1A762A7F00C3291B /* Debug */,
+				526C842D1A762A7F00C3291B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		52F1C4E01A6F58D100BCDFAC /* Build configuration list for PBXNativeTarget "Tutorial4UsingDisplayListAndFog" */ = {
 			isa = XCConfigurationList;

@@ -14,8 +14,9 @@
 #include "font.h"
 GLfloat lightAmbient[] = {0.0f, 0.0f, 0.0f, 1.0f};
 GLfloat lightDiffuse[] = {1.0f, 1.0f, 1.0f, 1.0f};
-GLfloat lightPosition[] = {0.0f, 0.0f, -5.0f, 1.0f};
+GLfloat lightPosition[] = {0.0f, 0.0f, 1.0f, 0.0f};
 GLfloat material[]  ={1.0f, 1.0f, 1.0f, 1.0f};
+GLfloat	fogColor[4] = {0.5f,0.5f,0.5f,1.0f};
 
 GLuint textureId;
 
@@ -144,7 +145,7 @@ void display(){
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, textureId);
     for (int i = 0; i < 20; i++) {
-//        glTranslated(0, 0, -5);
+        glTranslated(0, 0, -5);
         drawCube(-6);
         drawCube2(-3);
         drawCube(2);
@@ -187,7 +188,7 @@ int main(int argc, char * argv[])
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClearColor(0.5f, 0.5f, 0.5f, 0.5f);
     glClearDepth(1.0f);
     
     glEnable(GL_TEXTURE_2D);
@@ -202,6 +203,14 @@ int main(int argc, char * argv[])
     glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
     glEnable(GL_LIGHT0);
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, material);
+    
+    glFogi(GL_FOG_MODE, GL_EXP);
+    glFogfv(GL_FOG_COLOR, fogColor);
+    glFogf(GL_FOG_DENSITY, 0.1f);
+    glHint(GL_FOG_HINT, GL_DONT_CARE);
+    glFogf(GL_FOG_START, 1.0f);
+    glFogf(GL_FOG_END, 30.0f);
+    glEnable(GL_FOG);
     
     textureId = load_png("resources/tex.png");
     fontTextureID = load_png("resources/font.png");
