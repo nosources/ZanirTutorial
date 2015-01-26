@@ -14,7 +14,7 @@
 #include "font.h"
 GLfloat lightAmbient[] = {0.0f, 0.0f, 0.0f, 1.0f};
 GLfloat lightDiffuse[] = {1.0f, 1.0f, 1.0f, 1.0f};
-GLfloat lightPosition[] = {0.0f, 0.0, 1.0f, 0.0f};
+GLfloat lightPosition[] = {0.0f, 0.0f, -5.0f, 1.0f};
 GLfloat material[]  ={1.0f, 1.0f, 1.0f, 1.0f};
 
 GLuint textureId;
@@ -124,6 +124,7 @@ void drawCube2(int z){
 void display(){
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     glLineWidth(6);
+    glDisable(GL_TEXTURE_2D);
     glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
     glLoadIdentity();
     glBegin(GL_LINES);
@@ -140,9 +141,10 @@ void display(){
     glNormal3f(0.0f, 0.0f, 1.0f);
     glVertex3f(0.0f, 0.0f, 5.0f);
     glEnd();
+    glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, textureId);
     for (int i = 0; i < 20; i++) {
-        glTranslated(0, 0, -5);
+//        glTranslated(0, 0, -5);
         drawCube(-6);
         drawCube2(-3);
         drawCube(2);
@@ -150,7 +152,7 @@ void display(){
     }
     glDisable(GL_LIGHTING);
     glBindTexture(GL_TEXTURE_2D, 0);
-#define REFRESH_FRAMES 60
+#define REFRESH_FRAMES 1000
     if (drawCount++ == REFRESH_FRAMES) {
         //every 60 times refresh the label.
         drawCount = 0;
@@ -181,7 +183,7 @@ int main(int argc, char * argv[])
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(60.0f, 1.0f, 1.0f, 100.0f);
-    gluLookAt(10, 10, 10, 0, 0, 0, 0, 1, 0);
+    gluLookAt(10, 10, 20, 0, 0, 0, 0, 1, 0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     

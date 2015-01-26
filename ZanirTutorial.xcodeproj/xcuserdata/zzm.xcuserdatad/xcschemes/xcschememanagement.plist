@@ -29,9 +29,19 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>TutorialLightSphere.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0A9DB6C31A74FE6C0094CB00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0AB9FFAD1A6FF9F8006E861B</key>
 		<dict>
 			<key>primary</key>
